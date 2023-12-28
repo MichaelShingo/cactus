@@ -4,6 +4,7 @@ import { Righteous } from 'next/font/google';
 const righteous = Righteous({
 	weight: ['400'],
 	style: ['normal'],
+	subsets: ['latin'],
 });
 
 export const theme = createTheme({

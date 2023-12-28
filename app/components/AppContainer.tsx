@@ -14,7 +14,7 @@ const AppContainer: React.FC<AppContainerProps> = ({ children }) => {
 			data-label="app-container"
 			component="div"
 			sx={{
-				backgroundColor: 'none',
+				backgroundColor: 'white',
 				color: 'white',
 				overflowX: 'hidden',
 				overflowY: 'hidden',
