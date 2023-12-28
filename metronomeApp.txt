@@ -1,0 +1,77 @@
+TODO before public announcement
+- prevent screen turn off 
+- contact info/feedback component
+-- check the settings box on iphone and galaxy fold, you need to make the selects smaller
+- seo? 
+
+
+PWA
+- https://blog.stackademic.com/adding-pwa-to-next-js-with-app-directory-simple-guide-73284be7b7c1
+- require bug - https://stackoverflow.com/questions/59278151/eslint-require-statement-not-part-of-import-statement-typescript-eslint-no-va
+
+Extra features
+- vibration trigger 
+- use localStorage to save last settings on device.
+- isn't there some crackle in the audio when you start drone or adjust volume? 
+- light/dark modes
+- MUI bottom right + icon for my contact info, suggestions, etc.
+- shouldn't there be + - buttons for both polyrhythms and regular beat ? And a way to set it by dropdown for main? 
+Advanced features
+- custom sound sample upload?
+- create click tracks
+- create practice sessions (after 4 beats, increase tempo...)
+- can you include a tuner on here as well?
+- can you collect user data (like how long they used the metronome, what tempos, etc., it could be anonymous)
+- subdivisions of more speciifc rhythms, like syncopated
+
+
+- ESLint auto format - NEED TO RUN THIS ./node_modules/.bin/eslint --ini 
+	- but use settings in here: https://www.aleksandrhovhannisyan.com/blog/format-code-on-save-vs-code-eslint/#1-installing-eslint-optional-prettier
+	
+	
+- Testing libraries?
+
+
+
+import { actions, useAppState } from '../context/AppStateContext';
+const { state, dispatch } = useAppState();
+
+
+States:
+	Time signature with Asymmetrical meter support
+	- Tempo (with text indicator)
+	- Playing or stopped
+	- Beat indicator
+	?Subdivisions
+	Tone type 
+	tap for tempo5
+	- drone tone (is actually nice feature)
+	- voice control to stop, start 
+	- ability to change color theme?
+modal
+- sound type (sawtooth etc.)
+- color theme
+
+
+
+// resume audio context to prevent lag
+	// useEffect(() => {
+	// 	// Fix for The AudioContext is "suspended". Invoke Tone.start() from a user action to start the audio.
+	// 	// even if it says it's running, there is a delay
+	// 	const resumeAudioContext = () => {
+	// 		Tone.start();
+	// 		// console.log(Tone.context);
+	// 		// console.log(Tone.context.state);
+	// 		if (Tone.context.state !== 'running') {
+	// 			// console.log('resuming audio context');
+	// 			Tone.context.resume();
+	// 		}
+	// 	};
+	// 	resumeAudioContext();
+	// 	const intervalId = setInterval(resumeAudioContext, 5000);
+	// 	return () => clearInterval(intervalId);
+	// });
+
+
+	
+	
