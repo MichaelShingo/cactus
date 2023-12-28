@@ -7,9 +7,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	manifest: '/manifest.json',
-	title: 'Miitronome | Online Metronome',
-	description:
-		'Miitronome, a customizable web metronome controllable from your keyboard. Great for desktop, mobile, and tablet.',
+	title: 'Cactus Player',
+	description: 'A 3D cactus music visualizer.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
