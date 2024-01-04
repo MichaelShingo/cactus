@@ -3,19 +3,20 @@ import AppStateProvider from './context/AppStateContext';
 import KeyPressHandler from './components/KeyPressHandler';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/utils/theme';
-import Flash from './components/Flash';
 import AppContainer from './components/AppContainer';
 import AudioComponent from './components/AudioComponent';
+import ModelCanvas from './components/3d/ModelCanvas';
+import { Leva } from 'leva';
 
 export default function Home() {
 	return (
 		<ThemeProvider theme={theme}>
+			<Leva />
 			<AppStateProvider>
 				<AudioComponent />
-				<Flash />
 				<KeyPressHandler />
 				<AppContainer>
-					<p></p>
+					{/* <ModelCanvas /> */}
 				</AppContainer>
 			</AppStateProvider>
 		</ThemeProvider>

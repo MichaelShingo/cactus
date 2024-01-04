@@ -6,10 +6,12 @@ export const SETTINGS_ROW_SPACING: string = '10px';
 interface GlobalState {
 	dark_mode: boolean;
 	settings_open: boolean;
+	rms: number;
 }
 const initialState: GlobalState = {
 	dark_mode: true,
 	settings_open: false,
+	rms: 20,
 };
 
 export type AppAction = { type: string; payload?: string | number };
@@ -22,13 +24,15 @@ interface AppStateContextType {
 export const actions: Record<string, string> = {
 	DARK_MODE: 'DARK_MODE',
 	SETTINGS_OPEN: 'SETTINGS_OPEN',
+	SET_RMS: 'SET_RMS',
 };
 
 const appReducer = (state: GlobalState, action: AppAction): GlobalState => {
 	switch (action.type) {
 		case actions.SETTINGS_OPEN:
 			return { ...state, settings_open: !state.settings_open };
-
+		case actions.SET_RMS:
+			return { ...state, rms: action.payload as number}
 		default:
 			return state;
 	}
